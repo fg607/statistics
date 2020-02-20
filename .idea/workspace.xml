@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b52ccf6-ea58-400b-b357-e408c65044f4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/statapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/statapp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/statapp/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/statapp/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/statapp/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/statapp/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="5b52ccf6-ea58-400b-b357-e408c65044f4" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -44,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/statapp/resources/js/views/Hello.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -1270,7 +1266,7 @@
       <path value="$PROJECT_DIR$/statapp/vendor/facade/ignition/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="y" value="28" />
     <option name="width" value="1239" />
     <option name="height" value="488" />
@@ -1356,15 +1352,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582188337262</updated>
-      <workItem from="1582188345257" duration="1283000" />
+      <workItem from="1582188345257" duration="1883000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1283000" />
+    <option name="totallyTimeSpent" value="1883000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="28" width="1366" height="740" extended-state="6" />
+    <frame x="0" y="28" width="1366" height="740" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" />
@@ -1425,7 +1421,7 @@
     <entry file="file://$PROJECT_DIR$/statapp/resources/js/views/Hello.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
