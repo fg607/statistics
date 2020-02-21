@@ -11,7 +11,7 @@
 
 <script>
     import ECharts from 'vue-echarts'
-    import 'echarts/lib/chart/pie'
+    import echarts from 'echarts'
     export default {
         components: {
             'v-chart': ECharts
