@@ -10,8 +10,9 @@
 </template>
 
 <script>
-    import ECharts from 'vue-echarts'
-    import 'echarts'
+    import ECharts from 'vue-echarts/components/ECharts'
+    import theme from '../theme.json'
+    ECharts.registerTheme('ovilia-green', theme); //引入主题  
     export default {
         components: {
             'v-chart': ECharts
