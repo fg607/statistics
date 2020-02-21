@@ -10,6 +10,8 @@
 </template>
 
 <script>
+    import ECharts from 'vue-echarts'
+    import 'echarts/lib/chart/pie'
     export default {
         components: {
             'v-chart': ECharts
