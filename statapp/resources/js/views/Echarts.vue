@@ -11,12 +11,7 @@
 
 <script>
     import ECharts from 'vue-echarts'
-    import 'echarts/lib/chart/bar'
-    import 'echarts/lib/component/tooltip'
-    import 'echarts/lib/component/polar'
-    import 'echarts/lib/component/legend'
-    import 'echarts/lib/component/title.js'
-    import 'echarts//lib/chart/scatter'
+    import 'echarts'
     export default {
         components: {
             'v-chart': ECharts
