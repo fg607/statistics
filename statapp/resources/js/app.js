@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import ECharts from 'vue-echarts/components/ECharts.vue'
+import ECharts from 'vue-echarts'
 
 import 'echarts/lib/chart/bar'
 import 'echarts/lib/component/tooltip'
