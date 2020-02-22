@@ -8,4 +8,6 @@ class BackPeopleInfo extends Model
 {
     //
     public $timestamps = false;
+
+
 }
