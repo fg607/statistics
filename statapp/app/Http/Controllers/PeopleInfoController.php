@@ -56,7 +56,7 @@ class PeopleInfoController extends Controller
         $number = DayliyIsolateNumber::pluck('numbers');
 
 
-        return array('dayliyDate'=>$date,'dayliyIsolateNum'=>$numbers);
+        return array('dayliyDate'=>$date,'dayliyIsolateNum'=>$number);
 
     }
 
