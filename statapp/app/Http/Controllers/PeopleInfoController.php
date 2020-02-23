@@ -34,7 +34,7 @@ class PeopleInfoController extends Controller
 
            $district = array('hubei'=>$this->getHubei(),'hotCity'=>$this->getHotcity(),'otherCity'=>$this->getOthercity());
 
-           return district;
+           return $district;
 
 
     }
