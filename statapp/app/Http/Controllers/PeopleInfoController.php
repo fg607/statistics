@@ -53,8 +53,10 @@ class PeopleInfoController extends Controller
     public function getDayliyIsolate(){
 
         $date = DayliyIsolateNumber::pluck('date');
+        $number = DayliyIsolateNumber::pluck('numbers');
 
-        return $date;
+
+        return array('dayliyDate'=>$date,'dayliyIsolateNum'=>$numbers);
 
     }
 
