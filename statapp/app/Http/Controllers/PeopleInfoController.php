@@ -30,6 +30,15 @@ class PeopleInfoController extends Controller
           return $hotCityPeople;
     }
 
+    public function getDistrict(){
+
+           $district = array('hubei'=>getHubei(),'hotCity'=>getHotcity(),'otherCity'=>getOthercity());
+
+           return district;
+
+
+    }
+
     public function getIsolate(){
 
         $isolate = BackPeopleInfo::where('isolate_flag','是')->count();
