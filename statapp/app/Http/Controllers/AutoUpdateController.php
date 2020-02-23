@@ -11,9 +11,9 @@ class AutoUpdateController extends Controller
 {
     public function updateDayliyIsolate(){
 
-        $peopleInfos = BackPeopleInfo::where('isolate_date','>',date("Y-m-d", strtotime("-1 week")))->get();
+        $peopleInfos = BackPeopleInfo::where('isolate_date','>',date("Y-m-d", strtotime("-2 week")))->get();
 
-        return count($peopleInfos);
+        return $peopleInfos;
 
     }
 }
