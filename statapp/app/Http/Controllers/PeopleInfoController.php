@@ -1,6 +1,5 @@
 <?php
-
-date_default_timezone_set("PRC");
+ini_set('date.timezone','Asia/Shanghai');
 
 namespace App\Http\Controllers;
 
