@@ -19,7 +19,7 @@ class AutoUpdateController extends Controller
 
             if($peopleInfo->isolate_flag == '否'){
 
-                $peoleInfo->isolate_flag = '是';
+                $peopleInfo->isolate_flag = '是';
                 $peopleInfo->save();
             }
         }
