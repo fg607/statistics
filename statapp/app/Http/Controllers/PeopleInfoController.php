@@ -13,7 +13,7 @@ class PeopleInfoController extends Controller
 
     public function getHubei(){
          $hubeiPeople = BackPeopleInfo::where('isolate_level','like','%湖北%')->count();
-         $wuhanPeople = BackPeopleInfo::where('isolate_level','like','%湖北%')->count();
+         $wuhanPeople = BackPeopleInfo::where('isolate_level','like','%武汉%')->count();
 
          return $hubeiPeople+$wuhanPeople;
     }
