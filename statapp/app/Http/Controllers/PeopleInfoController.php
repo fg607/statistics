@@ -62,7 +62,9 @@ class PeopleInfoController extends Controller
 
     public function getPeopleInfos(){
 
-          $peopleInfos = array_merge($this->getDistrict(),$this->getIsolate());
+          $peopleInfos = array_merge($this->getDistrict(),$this->getIsolate(),$this->getDayliyIsolate);
+
+          return $peopleInfos;
 
 
     }
