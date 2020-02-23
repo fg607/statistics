@@ -27,7 +27,7 @@ class PeopleInfoController extends Controller
     public function getOthercity(){
           $otherCityPeople = BackPeopleInfo::where('isolate_level','like','普通')->count();
 
-          return $hotCityPeople;
+          return $otherCityPeople;
     }
 
     public function getDistrict(){
@@ -51,7 +51,7 @@ class PeopleInfoController extends Controller
 
         $notIsolate = BackPeopleInfo::where('isolate_flag','否')->count();
 
-        return $getNotIsolate;
+        return $notIsolate;
 
     }
 
