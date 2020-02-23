@@ -13,9 +13,8 @@ class PeopleInfoController extends Controller
 
     public function getHubei(){
          $hubeiPeople = BackPeopleInfo::where('isolate_level','like','%湖北%')->count();
-         $wuhanPeople = BackPeopleInfo::where('isolate_level','like','%武汉%')->count();
 
-         return $hubeiPeople+$wuhanPeople;
+         return $hubeiPeople;
     }
 
     public function getHotcity(){
@@ -42,10 +41,12 @@ class PeopleInfoController extends Controller
 
     public function getIsolate(){
 
-        $isolate = BackPeopleInfo::where('isolate_flag','否')->count();
+        $hubeiIsolate = BackPeopleInfo::where([['isolate_flag','否'],['isolate_level','like','%湖北%'])->count();
+        $hotCityIsolate = BackPeopleInfo::where([['isolate_flag','否'],['isolate_level','like','%两省四市%'])->count();
+        $otherIsolate = BackPeopleInfo::where([['isolate_flag','否'],['isolate_level','like','%普通%'])->count();
         $notIsolate = BackPeopleInfo::where('isolate_flag','是')->count();
 
-        $isolateArray = array('isolate'=>$isolate,'notIsolate'=>$notIsolate);
+        $isolateArray = array('hubeiIsolate'=>$hubeiIsolate,'hotCityIsolate'=>$hotCityIsolate,'otherIsolate'=>$otherIsolate,'notIsolate'=>$notIsolate);
 
         return $isolateArray;
     }
