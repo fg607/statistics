@@ -11,7 +11,7 @@ class AutoUpdateController extends Controller
 {
     public function updateDayliyIsolate(){
 
-        /*$peopleInfos = BackPeopleInfo::where('isolate_date','<=',date("Y-m-d", strtotime("-2 week")))->get();
+        $peopleInfos = BackPeopleInfo::where('isolate_date','<=',date("Y-m-d", strtotime("-2 week")))->get();
 
         foreach($peopleInfos as $peopleInfo){
 
@@ -20,7 +20,7 @@ class AutoUpdateController extends Controller
                 $peoleInfo->isolate_flag = '是';
                 $peopleInfo->save();
             }
-        }*/
+        }
 
         $isolate = BackPeopleInfo::where('isolate_flag','否')->get();
 
