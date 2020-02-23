@@ -42,8 +42,8 @@ class PeopleInfoController extends Controller
 
     public function getIsolate(){
 
-        $isolate = BackPeopleInfo::where('isolate_flag','是')->count();
-        $notIsolate = BackPeopleInfo::where('isolate_flag','否')->count();
+        $isolate = BackPeopleInfo::where('isolate_flag','否')->count();
+        $notIsolate = BackPeopleInfo::where('isolate_flag','是')->count();
 
         $isolateArray = array('isolate'=>$isolate,'notIsolate'=>$notIsolate);
 
