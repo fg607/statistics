@@ -63,7 +63,7 @@ class PeopleInfoController extends Controller
 
     public function getPeopleInfos(){
 
-          $peopleInfos = array_merge(array('date'=>date()),$this->getDistrict(),$this->getIsolate(),$this->getDayliyIsolate());
+          $peopleInfos = array_merge(array('date'=>date("Y-m-d")),$this->getDistrict(),$this->getIsolate(),$this->getDayliyIsolate());
 
           return $peopleInfos;
 
