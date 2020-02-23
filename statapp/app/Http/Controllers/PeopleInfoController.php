@@ -41,9 +41,9 @@ class PeopleInfoController extends Controller
 
     public function getIsolate(){
 
-        $hubeiIsolate = BackPeopleInfo::where([['isolate_flag','否'],['isolate_level','like','%湖北%'])->count();
-        $hotCityIsolate = BackPeopleInfo::where([['isolate_flag','否'],['isolate_level','like','%两省四市%'])->count();
-        $otherIsolate = BackPeopleInfo::where([['isolate_flag','否'],['isolate_level','like','%普通%'])->count();
+        $hubeiIsolate = BackPeopleInfo::where([['isolate_flag','否'],['isolate_level','like','%湖北%']])->count();
+        $hotCityIsolate = BackPeopleInfo::where([['isolate_flag','否'],['isolate_level','like','%两省四市%']])->count();
+        $otherIsolate = BackPeopleInfo::where([['isolate_flag','否'],['isolate_level','like','%普通%']])->count();
         $notIsolate = BackPeopleInfo::where('isolate_flag','是')->count();
 
         $isolateArray = array('hubeiIsolate'=>$hubeiIsolate,'hotCityIsolate'=>$hotCityIsolate,'otherIsolate'=>$otherIsolate,'notIsolate'=>$notIsolate);
