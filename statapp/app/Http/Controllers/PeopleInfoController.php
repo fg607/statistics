@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\BackPeopleInfo;
+use App\DayliyIsolateNumber;
 
 class PeopleInfoController extends Controller
 {
@@ -42,16 +43,25 @@ class PeopleInfoController extends Controller
     public function getIsolate(){
 
         $isolate = BackPeopleInfo::where('isolate_flag','是')->count();
+        $notIsolate = BackPeopleInfo::where('isolate_flag','否')->count();
 
-        return $isolate;
+        $isolateArray = array('isolate'=>$isolate,'notIsolate'=>$notIsolate);
+
+        return $isolateArray;
+    }
+
+    public function getDayliyIsolate(){
+
+        $date = DayliyIsolateNumber::pluck('date');
+
+        return $date;
 
     }
 
-    public function getNotIsolate(){
+    public function getPeopleInfos(){
 
-        $notIsolate = BackPeopleInfo::where('isolate_flag','否')->count();
+          $peopleInfos = array_merge($this->getDistrict(),$this->getIsolate());
 
-        return $notIsolate;
 
     }
 

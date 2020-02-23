@@ -17,4 +17,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/district','PeopleInfoController@getDistrict');
+Route::get('/peopleinfos','PeopleInfoController@getPeopleInfos');
+Route::get('/dayliy','PeopleInfoController@getDayliyIsolate');
+
