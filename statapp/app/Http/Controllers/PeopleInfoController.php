@@ -1,5 +1,4 @@
 <?php
-date_default_timezone_set('PRC')
 
 namespace App\Http\Controllers;
 
@@ -63,6 +62,8 @@ class PeopleInfoController extends Controller
     }
 
     public function getPeopleInfos(){
+
+          date_default_timezone_set("PRC");
 
           $peopleInfos = array_merge(array('date'=>date("Y-m-d")),$this->getDistrict(),$this->getIsolate(),$this->getDayliyIsolate());
 
