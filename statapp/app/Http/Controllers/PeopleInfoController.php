@@ -1,5 +1,4 @@
 <?php
-ini_set('date.timezone','Asia/Shanghai');
 
 namespace App\Http\Controllers;
 
