@@ -17,9 +17,9 @@ class AutoUpdateController extends Controller
 
         foreach($peopleInfos as $peopleInfo){
 
-            if($peopleInfo->isolateFlag == '否'){
+            if($peopleInfo->isolate_flag == '否'){
 
-                $peoleInfo->isolateFlag = '是';
+                $peoleInfo->isolate_flag = '是';
                 $peopleInfo->save();
             }
         }
