@@ -32,7 +32,7 @@ class PeopleInfoController extends Controller
 
     public function getDistrict(){
 
-           $district = array('hubei'=>getHubei(),'hotCity'=>getHotcity(),'otherCity'=>getOthercity());
+           $district = array('hubei'=>$this->getHubei(),'hotCity'=>$this->getHotcity(),'otherCity'=>$this->getOthercity());
 
            return district;
 
