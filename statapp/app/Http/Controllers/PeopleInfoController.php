@@ -77,7 +77,7 @@ class PeopleInfoController extends Controller
 
           date_default_timezone_set("PRC");
 
-          $peopleInfos = array_merge(array('date'=>date("Y-m-d")),$this->getDistrict(),$this->getIsolate(),$this->getDayliyIsolate(),$this->getNewIsolate());
+          $peopleInfos = array_merge(array('date'=>date("Y-m-d")),$this->getDistrict(),$this->getIsolate(),$this->getDayliyIsolate());
 
           return $peopleInfos;
 
