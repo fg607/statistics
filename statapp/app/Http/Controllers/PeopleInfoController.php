@@ -18,14 +18,14 @@ class PeopleInfoController extends Controller
     }
 
     public function getHotcity(){
-         $hotCityPeople = BackPeopleInfo::where('isolate_level','like','两省四市')->count();
+         $hotCityPeople = BackPeopleInfo::where('isolate_level','like','%两省四市%')->count();
 
          return $hotCityPeople;
     }
 
 
     public function getOthercity(){
-          $otherCityPeople = BackPeopleInfo::where('isolate_level','like','普通')->count();
+          $otherCityPeople = BackPeopleInfo::where('isolate_level','like','%普通%')->count();
 
           return $otherCityPeople;
     }
