@@ -61,11 +61,21 @@ class PeopleInfoController extends Controller
 
     }
 
+    public function function getNewIsolate(){
+
+        $newIsolate = BackPeopleInfo::where([['isolate_date',date("Y-m-d")],['isolate_flag','否']])->count();
+
+        $newFree = BackPeopleInfo::where('isolate_date',date("Y-m-d", strtotime("-2 week")))->count();
+
+        return array('newIsolate'=>$newIsolate,'newFree'=>$newFree);
+
+    }
+
     public function getPeopleInfos(){
 
           date_default_timezone_set("PRC");
 
-          $peopleInfos = array_merge(array('date'=>date("Y-m-d")),$this->getDistrict(),$this->getIsolate(),$this->getDayliyIsolate());
+          $peopleInfos = array_merge(array('date'=>date("Y-m-d")),$this->getDistrict(),$this->getIsolate(),$this->getDayliyIsolate(),$this->getNewIsolate());
 
           return $peopleInfos;
 
