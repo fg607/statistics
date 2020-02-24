@@ -33,7 +33,7 @@ class StatisticsController extends Controller
          $qrcodePeople = BackPeopleInfo::where('qrcode_flag','是')->count();
          $qrcodeIsolateRooms = BackPeopleInfo::where([['qrcode_flag','是'],['isolate_flag','否']])->select('address')->distinct()->count();
          $qrcodeIsolatePeople = BackPeopleInfo::where([['qrcode_flag','是'],['isolate_flag','否']])->count();
-         $qrcodeFreeRooms = $qrcodeRooms - $qrcodeIsolateRooms;
+         $qrcodeFreeRooms = count($qrcodeRooms) - $qrcodeIsolateRooms;
          $qrcodeFreePeople = $qrcodePeople - $qrcodeIsolatePeople;
 
          return array('hotRooms'=>$hotRooms,'hotPeople'=>$hotPeople,'hotIsolateRooms'=>$hotIsolateRooms,'hotIsolatePeople'=>$hotIsolatePeople,
