@@ -24,12 +24,12 @@ class AutoUpdateController extends Controller
             }
         }
 
-        $isolate = BackPeopleInfo::where('isolate_flag','否')->get();
+        $isolate = BackPeopleInfo::where('isolate_flag','否')->count();
 
         $dayliyIsolate = new DayliyIsolateNumber;
 
         $dayliyIsolate->date = date("Y-m-d");
-        $dayliyIsolate->numbers = count($isolate);
+        $dayliyIsolate->numbers = $isolate;
 
         $dayliyIsolate->save();
 

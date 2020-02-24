@@ -38,7 +38,7 @@ class StatisticsController extends Controller
 
          return array('hotRooms'=>$hotRooms,'hotPeople'=>$hotPeople,'hotIsolateRooms'=>$hotIsolateRooms,'hotIsolatePeople'=>$hotIsolatePeople,
                  'hubeiIsolateRooms'=>$hubeiIsolateRooms,'hubeiIsolatePeople'=>$hubeiIsolatePeople,'otherRooms'=>$otherRooms,
-                  'otherPeople'=>otherPeople,'otherIsolateRooms'=>$otherIsolateRooms,'otherIsolatePeople'=>$otherIsolatePeople,
+                  'otherPeople'=>$otherPeople,'otherIsolateRooms'=>$otherIsolateRooms,'otherIsolatePeople'=>$otherIsolatePeople,
                   'freeOtherRooms'=>$freeOtherRooms,'freeOtherPeople'=>$freeOtherPeople,'qrcodeRooms'=>$qrcodeRooms,'qrcodePeople'=>$qrcodePeople,
                   'qrcodeIsolateRooms'=>$qrcodeIsolateRooms,'qrcodeIsolatePeople'=>$qrcodeIsolatePeople,'qrcodeFreeRooms'=>$qrcodeFreeRooms,
                   'qrcodeFreePeople'=>$qrcodeFreePeople);
