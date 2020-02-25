@@ -10,7 +10,13 @@ Route::group([
     'middleware'    => config('admin.route.middleware'),
 ], function (Router $router) {
 
-    $router->get('/', 'HomeController@index')->name('admin.home');
+    $router->get('/', function () {
+        return redirect('admin/back-people-infos');
+    });
+
+    $router->get('/admin/dashboard', function () {
+        return redirect('admin/sback-people-infos');
+    });
 
     $router->resource('back-people-infos', BackPeopleController::class);
 });
