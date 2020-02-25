@@ -44,11 +44,11 @@ class BackPeopleController extends AdminController
 
         $grid->filter(function($filter){
             $filter->disableIdFilter();
-            $filter->scope('qrcode', '今日新增')->where('isolate_date',date("Y-m-d"));
-            $filter->scope('qrcode', '今日扫码')->where([['qrcode_flag', '是'],['isolate_date',date("Y-m-d")]]);
-            $filter->scope('newfree', '今日解除')->where('isolate_date', date("Y-m-d", strtotime("-2 week")));
+            $filter->scope('new_isolate', '今日新增')->where('isolate_date',date("Y-m-d"));
+            $filter->scope('qrcode_new', '今日扫码')->where([['qrcode_flag', '是'],['isolate_date',date("Y-m-d")]]);
+            $filter->scope('new_free', '今日解除')->where('isolate_date', date("Y-m-d", strtotime("-2 week")));
             $filter->scope('qrcode', '扫码人员')->where('qrcode_flag', '是');
-            $filter->scope('qrcode', '隔离人员')->where('isolate_flag', '否');
+            $filter->scope('isolate', '隔离人员')->where('isolate_flag', '否');
             $filter->like('name','姓名');
             $filter->like('address','楼栋号');
 
