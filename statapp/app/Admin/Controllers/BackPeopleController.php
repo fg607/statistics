@@ -49,8 +49,16 @@ class BackPeopleController extends AdminController
             $filter->scope('new_free', '今日解除')->where('isolate_date', date("Y-m-d", strtotime("-2 week")));
             $filter->scope('qrcode', '扫码人员')->where('qrcode_flag', '是');
             $filter->scope('isolate', '隔离人员')->where('isolate_flag', '否');
+            $filter->scope('hubei', '湖北地区')->where('isolate_level', 'like','%湖北%');
+            $filter->scope('hot_city', '一省四市')->where('isolate_level', 'like','%两省四市%');
+            $filter->scope('other', '其他地区')->where('isolate_level', '普通');
             $filter->like('name','姓名');
             $filter->like('address','楼栋号');
+            $filter->equal('isolate_flag','解除隔离')->radio([
+                    '否' => '否',
+                    '是' => '是',
+                ]);
+
 
 
 
