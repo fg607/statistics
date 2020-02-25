@@ -40,6 +40,11 @@ class BackPeopleController extends AdminController
         $grid->column('vehicle_info', __('交通工具'));
         $grid->column('remarks', __('备注'));
 
+        $grid->filter(function($filter){
+            $filter->disableIdFilter();
+            $filter->scope('qrcode', '扫码')->where('qrcode_flag', '是');
+        });
+
         return $grid;
     }
 
