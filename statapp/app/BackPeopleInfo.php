@@ -16,11 +16,15 @@ class BackPeopleInfo extends Model
 
         	static::created(function ($model) {
 
+        	    date_default_timezone_set("PRC");
+
         	    if($model->isolate_flag == '否'){
 
         	        $dayliyIsolate = DayliyIsolateNumber::where('date',date("Y-m-d"))->first();
 
         	        $dayliyIsolate->numbers = $dayliyIsolate->numbers + 1;
+
+        	         $dayliyIsolate0->update_time = date("Y-m-d H:i");
 
         	        $dayliyIsolate->save();
 

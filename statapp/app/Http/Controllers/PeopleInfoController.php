@@ -73,11 +73,20 @@ class PeopleInfoController extends Controller
 
     }
 
+    public function getUpdateTime(){
+
+        date_default_timezone_set("PRC");
+
+        $today = DayliyIsolateNumber::where('date',date("Y-m-d"))->first();
+
+        return array('updateTime'=>$today->update_time);
+
+    }
+
     public function getPeopleInfos(){
 
-          date_default_timezone_set("PRC");
 
-          $peopleInfos = array_merge(array('date'=>date("Y-m-d")),$this->getDistrict(),$this->getIsolate(),$this->getDayliyIsolate(),$this->getNewIsolate());
+          $peopleInfos = array_merge($this->getUpdateTime(),$this->getDistrict(),$this->getIsolate(),$this->getDayliyIsolate(),$this->getNewIsolate());
 
           return $peopleInfos;
 

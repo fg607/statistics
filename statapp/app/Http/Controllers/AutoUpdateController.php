@@ -30,6 +30,7 @@ class AutoUpdateController extends Controller
 
         $dayliyIsolate->date = date("Y-m-d");
         $dayliyIsolate->numbers = $isolate;
+        $dayliyIsolate->update_time = date("Y-m-d H:i");
 
         $dayliyIsolate->save();
 
