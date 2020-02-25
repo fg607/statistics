@@ -43,6 +43,8 @@ class BackPeopleController extends AdminController
         $grid->filter(function($filter){
             $filter->disableIdFilter();
             $filter->scope('qrcode', '扫码')->where('qrcode_flag', '是');
+            $filter->scope('newfree', '今日解除')->where('isolate_date', date("Y-m-d", strtotime("-2 week")));
+
         });
 
         return $grid;
