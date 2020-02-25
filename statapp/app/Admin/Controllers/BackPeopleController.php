@@ -24,6 +24,8 @@ class BackPeopleController extends AdminController
      */
     protected function grid()
     {
+        date_default_timezone_set("PRC");
+
         $grid = new Grid(new BackPeopleInfo());
 
         $grid->column('id', __('序号'));
@@ -42,8 +44,12 @@ class BackPeopleController extends AdminController
 
         $grid->filter(function($filter){
             $filter->disableIdFilter();
-            $filter->scope('qrcode', '扫码')->where('qrcode_flag', '是');
+            $filter->scope('qrcode', '今日扫码')->where([['qrcode_flag', '是'],['isolate_date',date("Y-m-d")]]);
             $filter->scope('newfree', '今日解除')->where('isolate_date', date("Y-m-d", strtotime("-2 week")));
+            $filter->like('name','姓名');
+            $filter->like('address','楼栋号');
+
+
 
         });
 
