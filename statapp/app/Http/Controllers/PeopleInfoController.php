@@ -67,7 +67,7 @@ class PeopleInfoController extends Controller
 
         $newIsolate = BackPeopleInfo::where([['isolate_date',date("Y-m-d")],['isolate_flag','否']])->count();
 
-        $newFree = BackPeopleInfo::where('isolate_date',date("Y-m-d", strtotime("-2 week")))->count();
+        $newFree = BackPeopleInfo::where('isolate_date',date("Y-m-d", strtotime("-15 day")))->count();
 
         return array('newIsolate'=>$newIsolate,'newFree'=>$newFree);
 

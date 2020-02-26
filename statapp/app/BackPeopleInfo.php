@@ -24,7 +24,7 @@ class BackPeopleInfo extends Model
 
         	        $dayliyIsolate->numbers = $dayliyIsolate->numbers + 1;
 
-        	         $dayliyIsolate0->update_time = date("Y-m-d H:i");
+        	         $dayliyIsolate->update_time = date("Y-m-d H:i:s");
 
         	        $dayliyIsolate->save();
 

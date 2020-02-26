@@ -13,7 +13,7 @@ class AutoUpdateController extends Controller
 
         date_default_timezone_set("PRC");
 
-        $peopleInfos = BackPeopleInfo::where('isolate_date','<=',date("Y-m-d", strtotime("-2 week")))->get();
+        $peopleInfos = BackPeopleInfo::where('isolate_date','<=',date("Y-m-d", strtotime("-15 day")))->get();
 
         foreach($peopleInfos as $peopleInfo){
 

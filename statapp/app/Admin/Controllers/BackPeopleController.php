@@ -54,6 +54,7 @@ class BackPeopleController extends AdminController
             $filter->scope('other', '其他地区')->where('isolate_level', '普通');
             $filter->like('name','姓名');
             $filter->like('address','楼栋号');
+            $filter->like('originatin','始发地');
             $filter->equal('isolate_flag','解除隔离')->radio([
                     '否' => '否',
                     '是' => '是',
