@@ -111,9 +111,9 @@ class BackPeopleController extends AdminController
         $form->text('originatin', __('始发地'));
         $form->date('back_date', __('返回日期'))->default(date('Y-m-d'));
         $form->date('isolate_date', __('隔离日期'))->default(date('Y-m-d'));
-        $form->text('isolate_flag', __('解除隔离'));
-        $form->text('isolate_level', __('隔离等级'));
-        $form->text('qrcode_flag', __('网格化管理'));
+        $form->text('isolate_flag', __('解除隔离'))->default('否');
+        $form->text('isolate_level', __('隔离等级'))->default('普通');
+        $form->text('qrcode_flag', __('网格化管理'))->default('否');
         $form->text('vehicle_info', __('交通工具'));
         $form->text('remarks', __('备注'));
 
